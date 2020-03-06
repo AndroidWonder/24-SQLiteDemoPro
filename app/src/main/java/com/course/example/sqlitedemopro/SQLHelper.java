@@ -1,5 +1,8 @@
 package com.course.example.sqlitedemopro;
 
+//This class is not an Activity. It is a helper class
+// used to execute the SQL statements on SQLite.
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -30,6 +33,7 @@ public class SQLHelper extends SQLiteOpenHelper {
 	}
  
 	//called to create table
+	//NB: this is not a lifecycle method because this class is not an Activity
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		String sql = CREATE_TABLE;
@@ -45,7 +49,7 @@ public class SQLHelper extends SQLiteOpenHelper {
 
 		Log.d("SQLiteDemo", "onUpgrade: Version = " + newVersion);
 		db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
-		onCreate(db);
+		onCreate(db);   //not calling a lifecycle method
 	}
 	
 	//add animal to database

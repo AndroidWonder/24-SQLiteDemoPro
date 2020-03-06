@@ -1,7 +1,8 @@
 package com.course.example.sqlitedemopro;
 
-import java.util.ArrayList;
 
+//This Activity uses a helper class to execute the actual SQL code.
+import java.util.ArrayList;
 import android.app.Activity;
 import android.os.Bundle;
 import android.database.*;

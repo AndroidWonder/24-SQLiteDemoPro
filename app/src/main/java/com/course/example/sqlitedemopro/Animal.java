@@ -24,11 +24,13 @@ public class Animal {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
+	
 	public Animal(String name, int quantity) {
 		super();
 		this.name = name;
 		this.quantity = quantity;
 	}
+
 	public Animal(String name) {
 		super();
 		this.name = name;
