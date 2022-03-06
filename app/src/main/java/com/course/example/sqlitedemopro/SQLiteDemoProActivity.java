@@ -37,7 +37,10 @@ public class SQLiteDemoProActivity extends Activity {
         } catch(SQLException e) { 
         						Log.d("SQLiteDemo", "Create database failed");
         						}
-            
+
+        //drop existing table and recreate
+        helper.dropTable();
+
         //insert records        
         helper.addAnimal(new Animal("tiger", 4));
         helper.addAnimal(new Animal("zebra", 23));

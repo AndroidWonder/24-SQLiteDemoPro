@@ -51,7 +51,14 @@ public class SQLHelper extends SQLiteOpenHelper {
 		db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
 		onCreate(db);   //not calling a lifecycle method
 	}
-	
+
+	//drop table
+	public void dropTable(){
+		SQLiteDatabase db = this.getWritableDatabase();
+		db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+		onCreate(db);   //not calling a lifecycle method
+	}
+
 	//add animal to database
 	public void addAnimal(Animal item) {
 		SQLiteDatabase db = this.getWritableDatabase();
