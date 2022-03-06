@@ -44,6 +44,7 @@ public class SQLiteDemoProActivity extends Activity {
         helper.addAnimal(new Animal("buffalo", 13));
         helper.addAnimal(new Animal("lion", 37));
         helper.addAnimal(new Animal("yak", 18));
+        helper.addAnimal(new Animal("dragon", 101));
                     
         
         //update buffalo to gorilla

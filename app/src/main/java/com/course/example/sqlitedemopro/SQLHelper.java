@@ -38,7 +38,7 @@ public class SQLHelper extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase db) {
 		String sql = CREATE_TABLE;
 		Log.d("SQLiteDemo", "onCreate: " + sql);
-		db.execSQL(sql);
+		db.execSQL(CREATE_TABLE);
 	}
 
 	//called when database version mismatch
